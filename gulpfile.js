@@ -59,7 +59,7 @@ function scssTask() {
 // JavaScript Task
 function jsTask() {
 	return src('src/js/*.js', { sourcemaps: isDev })
-		.pipe(terser())
+		.pipe(mode.production(terser()))
 		.pipe(dest(config.jsDir, { sourcemaps: '.' }));
 }
 
