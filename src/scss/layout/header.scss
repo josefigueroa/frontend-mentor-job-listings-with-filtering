@@ -1,0 +1,16 @@
+@use '../abstratcs/' as *;
+
+.header{
+  min-height: rem($header-height);
+  background-image: url('#{$img-path}bg-header-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: $primary;
+  background-size: cover;
+  margin-bottom: rem(56);
+  padding-left: rem(24);
+  padding-right: rem(24);
+  position: relative;
+  @include breakpoint('medium'){
+    background-image: url('#{$img-path}bg-header-desktop.svg');
+  }
+}

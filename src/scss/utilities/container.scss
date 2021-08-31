@@ -1,0 +1,10 @@
+@use '../abstratcs/' as *;
+
+.container{
+  max-width: rem(1148);
+  width: 100%;
+  padding-left: rem(24);
+  padding-right: rem(24);
+  margin: 0 auto;
+  position: relative;
+}

@@ -1,0 +1,22 @@
+@use '../abstratcs/' as *;
+
+.pills{  
+  padding: rem(8) rem(8) rem(3);
+  font-size: rem(11);
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1; 
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+@each $key, $value in $theme-colors {
+  $color: findColorInvert($value);
+  .pills--#{$key}{
+    background-color: $value;
+    color: $color;
+  }
+}

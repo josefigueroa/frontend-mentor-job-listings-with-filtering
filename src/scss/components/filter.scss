@@ -1,0 +1,73 @@
+@use '../abstratcs/' as *;
+
+.filter{  
+  display: none;
+  position: relative;
+  margin-top: rem(-100);
+  margin-bottom: rem(55);
+  &__wrapper{
+    display: none;
+    border-radius: rem(5);
+    padding: rem(20);
+    background: $white;
+    // transform: translateY($header-height - 35px);
+    max-width: rem(1110);
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint('medium'){
+      padding: rem(20) rem(40);
+      margin: 0 auto;
+    }
+  }
+ 
+ 
+
+  &__list{
+    display: flex;
+    gap: rem(18);
+    flex-wrap: wrap;
+    padding-right: rem(15);
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    border-radius: rem(5);
+
+  }
+  &__text{
+    color: $primary;
+    font-weight: 700;
+    background-color: $secondary;
+    padding: rem(9);
+    border-top-left-radius: rem(5);
+    border-bottom-left-radius: rem(5);
+    font-size: rem(13);
+  }
+  &__icon{
+    background-color: $primary;
+    padding: rem(7.5);
+    cursor: pointer;
+    border-top-right-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+    transition: .4s;
+    &:hover{
+      background-color: $black;
+    }
+    img{
+      vertical-align: middle;
+    }
+
+  }
+  &__clear{
+    cursor: pointer;
+    color: $gray;
+    font-weight: 700;
+    transition: .4s;
+    &:hover{
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+}

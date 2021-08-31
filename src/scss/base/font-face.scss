@@ -1,0 +1,14 @@
+@use '../abstratcs/' as *;
+
+@each $key, $value in $theme-fonts {
+  @font-face {
+    font-family: Spartan;
+    src: 
+      local('Spartan #{$value}'), local('Spartan-#{$value}'),
+      url('../fonts/Spartan-#{$value}.ttf') format('truetype');
+    font-style: normal;
+    font-weight: #{$key};
+    // text-rendering: optimizeLegibility;
+    font-display: swap;
+  }
+}

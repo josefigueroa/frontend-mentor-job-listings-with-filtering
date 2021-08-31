@@ -5,6 +5,10 @@
 	@return (math.div($pixels, $context)) * 1rem;
 }
 
+@function vw($pixels, $context: 1440) {
+	@return (math.div($pixels, $context)) * 100vw;
+}
+
 
 // Source: https://css-tricks.com/snippets/sass/luminance-color-function/
 /// Returns the luminance of `$color` as a float (between 0 and 1)

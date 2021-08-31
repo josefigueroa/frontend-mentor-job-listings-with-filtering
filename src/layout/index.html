@@ -3,11 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Job Listings with filtering">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Frontend Mentor</title>
+  <title>Frontend Mentor | Job Listings</title>
 </head>
 <body>
-  
+  <header class="header"></header>
+  <main class="container">
+    <section class="filter">
+      <div class="filter__wrapper">
+        <ul class="filter__list">
+          <li class="filter__item">
+            <span class="filter__text">Frontend</span>
+            <figure class="filter__icon">
+              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
+            </figure>
+          </li>
+          <li class="filter__item">
+            <span class="filter__text">Css</span>
+            <figure class="filter__icon">
+              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
+            </figure>
+          </li>
+          <li class="filter__item">
+            <span class="filter__text">JavaScript</span>
+            <figure class="filter__icon">
+              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
+            </figure>
+          </li>
+          <li class="filter__item">
+            <span class="filter__text">JavaScript</span>
+            <figure class="filter__icon">
+              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
+            </figure>
+          </li>
+        </ul>
+        <div class="filter__clear">Clear</div>
+      </div>
+    </section>
+    <section>
+      <article class="card card--featured">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/photosnap.svg" alt="Logo brand photosnap">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">Photosnap</span>             
+              <span class="pills pills--primary">New!</span>            
+              <span class="pills pills--black">Featured</span>
+            </div>              
+            <h2 class="card__title">Senior Frontend Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item ">
+               <span>1d ago</span>
+              </li>
+              <li class="card__list-item ">
+                <span>Full time</span>           
+              </li>
+              <li class="card__list-item ">
+                <span>USA only</span>
+              </li>
+            </ul>
+          </div>         
+        </div>       
+
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Senior</span>
+          <span class="card__tags">HTML</span>
+          <span class="card__tags">CSS</span>
+          <span class="card__tags">JavaScript</span>
+        </div>
+      </article>
+      <article class="card card--featured">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/manage.svg" alt="Logo brand manage">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">             
+              <span class="card__company">Manage</span>              
+              <span class="pills pills--primary">New!</span>
+              <span class="pills pills--black">Featured</span>             
+            </div>
+            <h2 class="card__title">Fullstack Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>1d ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Part Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>Remote</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Fullstack</span>
+          <span class="card__tags">Midweight</span>
+          <span class="card__tags">Python</span>
+          <span class="card__tags">React</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/account.svg" alt="Logo brand account">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">            
+              <span class="card__company">Account</span>          
+              <span class="pills pills--primary">New!</span> 
+            </div>
+            <h2 class="card__title">Junior Frontend Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>2d ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Part Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>USA only</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">React</span>
+          <span class="card__tags">Sass</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/myhome.svg" alt="Logo brand MyHome">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">MyHome</span>
+            </div>
+            <h2 class="card__title">Junior Frontend Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>5d ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Contract</span>           
+              </li>
+              <li class="card__list-item">
+                <span>USA only</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">CSS</span>
+          <span class="card__tags">JavaScript</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/loop-studios.svg" alt="Logo brand Loop Studios">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">             
+              <span class="card__company">Loop Studios</span>
+            </div>
+            <h2 class="card__title">Software Engineer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>1w ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Full Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>Worldwide</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Fullstack</span>
+          <span class="card__tags">Midweight</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">Ruby</span>
+          <span class="card__tags">Sass</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/faceit.svg" alt="Logo brand FaceIt">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">FaceIt</span>
+            </div>
+            <h2 class="card__title">Junior Backend Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>2w ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Full Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>UK only</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Backend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">Ruby</span>
+          <span class="card__tags">RoR</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/shortly.svg" alt="Logo brand Shortly">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">Shortly</span>
+            </div>
+            <h2 class="card__title">Junior Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>2w ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Full Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>Worldwide</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">HTML</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">Sass</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/insure.svg" alt="Logo brand Insure">
+          </figure>
+          <div class="card__info">
+            <div class="card__list">             
+              <span class="card__company">Insure</span>              
+            </div>
+            <h2 class="card__title">Junior Frontend Developer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>2w ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Full Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>USA only</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">Vue</span>
+          <span class="card__tags">Sass</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/eyecam-co.svg" alt="Logo brand Eyecam Co.">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">Eyecam Co.</span>
+            </div>
+            <h2 class="card__title">Full Stack Engineer</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>3w ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Full Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>Worldwide</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Fullstack</span>
+          <span class="card__tags">Midweight</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">Python</span>
+          <span class="card__tags">Django</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__resume">
+          <figure class="card__img">
+            <img width="88" height="88" src="images/the-air-filter-company.svg" alt="Logo brand Eyecam Co.">
+          </figure>
+          <div class="card__info">
+            <div class="card__items">
+              <span class="card__company">The Air Filter Company</span>
+            </div>
+            <h2 class="card__title">Front-end Dev</h2>
+            <ul class="card__list card__list--bullet">
+              <li class="card__list-item">
+               <span>1mo ago</span>
+              </li>
+              <li class="card__list-item">
+                <span>Part Time</span>           
+              </li>
+              <li class="card__list-item">
+                <span>Worldwide</span>
+              </li>
+            </ul>
+          </div>         
+        </div>     
+        <div class="card__filter">
+          <span class="card__tags">Frontend</span>
+          <span class="card__tags">Junior</span>
+          <span class="card__tags">JavaScript</span>
+          <span class="card__tags">React</span>
+          <span class="card__tags">Sass</span>
+        </div>
+      </article>
+    </section>
+  </main>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
