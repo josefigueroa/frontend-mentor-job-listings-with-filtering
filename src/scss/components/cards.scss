@@ -20,6 +20,9 @@
   &--featured{
     border-left: 5px solid $cyan;
   }
+  &--disabled{
+    display: none;
+  }
   &__resume{
     display: flex;
   }
@@ -115,6 +118,7 @@
   &__tags{
     background-color: $secondary;
     color: $primary;
+    border: 0;
     padding: rem(9);
     border-radius: rem(5);
     font-weight: 700;

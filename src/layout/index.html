@@ -14,36 +14,13 @@
     <section class="filter">
       <div class="filter__wrapper">
         <ul class="filter__list">
-          <li class="filter__item">
-            <span class="filter__text">Frontend</span>
-            <figure class="filter__icon">
-              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
-            </figure>
-          </li>
-          <li class="filter__item">
-            <span class="filter__text">Css</span>
-            <figure class="filter__icon">
-              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
-            </figure>
-          </li>
-          <li class="filter__item">
-            <span class="filter__text">JavaScript</span>
-            <figure class="filter__icon">
-              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
-            </figure>
-          </li>
-          <li class="filter__item">
-            <span class="filter__text">JavaScript</span>
-            <figure class="filter__icon">
-              <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
-            </figure>
-          </li>
+         
         </ul>
-        <div class="filter__clear">Clear</div>
+        <button type="button" aria-label="remove all filters" class="filter__clear">Clear</button>
       </div>
     </section>
     <section>
-      <article class="card card--featured">
+      <article class="card card--featured" data-tags="Frontend Senior HTML CSS JavaScript">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/photosnap.svg" alt="Logo brand photosnap">
@@ -70,14 +47,14 @@
         </div>       
 
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Senior</span>
-          <span class="card__tags">HTML</span>
-          <span class="card__tags">CSS</span>
-          <span class="card__tags">JavaScript</span>
+          <button type="button" aria-label="Senior Frontend Developer Frontend tag" class="card__tags">Frontend</button>
+          <button type="button" class="card__tags" aria-label="Senior Frontend Developer Senior tag" class="card__tags">Senior</button>
+          <button type="button" arial-label="Senior Frontend Developer Html tag" class="card__tags">HTML</button>
+          <button type="button" arial-label="Senior Frontend Developer CSS tag" class="card__tags">CSS</button>
+          <button type="button" arial-label="Senior Frontend Developer JavaScript tag" class="card__tags">JavaScript</button>
         </div>
       </article>
-      <article class="card card--featured">
+      <article class="card card--featured" data-tags="Fullstack Midweight Python React">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/manage.svg" alt="Logo brand manage">
@@ -103,13 +80,13 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Fullstack</span>
-          <span class="card__tags">Midweight</span>
-          <span class="card__tags">Python</span>
-          <span class="card__tags">React</span>
+          <button type="button" aria-label="Fullstack Developer Fullstack tag" class="card__tags">Fullstack</button>
+          <button type="button" aria-label="Fullstack Developer Midweight tag" class="card__tags">Midweight</button>
+          <button type="button" aria-label="Fullstack Developer Python tag" class="card__tags">Python</button>
+          <button type="button" aria-label="Fullstack Developer React tag" class="card__tags">React</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Frontend Junior JavaScript React Sass">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/account.svg" alt="Logo brand account">
@@ -134,14 +111,14 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">React</span>
-          <span class="card__tags">Sass</span>
+          <button type="button" aria-label="Junior Frontend Develop Frontend tag" class="card__tags">Frontend</button>
+          <button type="button" aria-label="Junior Frontend Develop Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Junior Frontend Develop JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Junior Frontend Develop React tag" class="card__tags">React</button>
+          <button type="button" aria-label="Junior Frontend Develop Sass tag" class="card__tags">Sass</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Frontend Junior CSS JavaScript">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/myhome.svg" alt="Logo brand MyHome">
@@ -165,13 +142,13 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">CSS</span>
-          <span class="card__tags">JavaScript</span>
+          <button type="button" aria-label="Junior Frontend Developer Frontend tag" class="card__tags">Frontend</button>
+          <button type="button" aria-label="Junior Frontend Developer Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Junior Frontend Developer CSS tag" class="card__tags">CSS</button>
+          <button type="button" aria-label="Junior Frontend Developer JavaScript tag" class="card__tags">JavaScript</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Fullstack Midweight JavaScript Ruby Sass">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/loop-studios.svg" alt="Logo brand Loop Studios">
@@ -195,14 +172,14 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Fullstack</span>
-          <span class="card__tags">Midweight</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">Ruby</span>
-          <span class="card__tags">Sass</span>
+          <button type="button" aria-label="Software Engineer fullstack tag" class="card__tags">Fullstack</button>
+          <button type="button" aria-label="Software Engineer Midweight tag" class="card__tags">Midweight</button>
+          <button type="button" aria-label="Software Engineer JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Software Engineer Ruby tag" class="card__tags">Ruby</button>
+          <button type="button" aria-label="Software Engineer Sass tag" class="card__tags">Sass</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Backend Junior Ruby RoR">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/faceit.svg" alt="Logo brand FaceIt">
@@ -226,13 +203,13 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Backend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">Ruby</span>
-          <span class="card__tags">RoR</span>
+          <button type="button" aria-label="Junior Backend Developer backend tag" class="card__tags">Backend</button>
+          <button type="button" aria-label="Junior Backend Developer Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Junior Backend Developer Ruby tag" class="card__tags">Ruby</button>
+          <button type="button" aria-label="Junior Backend Developer RoR tag" class="card__tags">RoR</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Frontend Junior HTML JavaScript Sass">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/shortly.svg" alt="Logo brand Shortly">
@@ -256,14 +233,14 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">HTML</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">Sass</span>
+          <button type="button" aria-label="Junior Developer frontend tag" class="card__tags">Frontend</button>
+          <button type="button" aria-label="Junior Developer Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Junior Developer HTML tag" class="card__tags">HTML</button>
+          <button type="button" aria-label="Junior Developer JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Junior Developer Sass tag" class="card__tags">Sass</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Frontend Junior JavaScript Vue Sass">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/insure.svg" alt="Logo brand Insure">
@@ -287,14 +264,14 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">Vue</span>
-          <span class="card__tags">Sass</span>
+          <button type="button" aria-label="Junior Frontend Developer frontend tag" class="card__tags">Frontend</button>
+          <button type="button" aria-label="Junior Frontend Developer Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Junior Frontend Developer JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Junior Frontend Developer Vue tag" class="card__tags">Vue</button>
+          <button type="button" aria-label="Junior Frontend Developer Sass tag" class="card__tags">Sass</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Fullstack Midweight JavaScript Python Django">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/eyecam-co.svg" alt="Logo brand Eyecam Co.">
@@ -318,14 +295,14 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Fullstack</span>
-          <span class="card__tags">Midweight</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">Python</span>
-          <span class="card__tags">Django</span>
+          <button type="button" aria-label="Full Stack Engineer fullstack tag" class="card__tags">Fullstack</button>
+          <button type="button" aria-label="Full Stack Engineer Midweight tag" class="card__tags">Midweight</button>
+          <button type="button" aria-label="Full Stack Engineer JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Full Stack Engineer Python tag" class="card__tags">Python</button>
+          <button type="button" aria-label="Full Stack Engineer Django tag" class="card__tags">Django</button>
         </div>
       </article>
-      <article class="card">
+      <article class="card" data-tags="Frontend Junior JavaScript React Sass">
         <div class="card__resume">
           <figure class="card__img">
             <img width="88" height="88" src="images/the-air-filter-company.svg" alt="Logo brand Eyecam Co.">
@@ -349,11 +326,11 @@
           </div>         
         </div>     
         <div class="card__filter">
-          <span class="card__tags">Frontend</span>
-          <span class="card__tags">Junior</span>
-          <span class="card__tags">JavaScript</span>
-          <span class="card__tags">React</span>
-          <span class="card__tags">Sass</span>
+          <button type="button" aria-label="Front-end Dev frontend tag" class="card__tags">Frontend</button>
+          <button type="button" aria-label="Front-end Dev Junior tag" class="card__tags">Junior</button>
+          <button type="button" aria-label="Front-end Dev JavaScript tag" class="card__tags">JavaScript</button>
+          <button type="button" aria-label="Front-end Dev React tag" class="card__tags">React</button>
+          <button type="button" aria-label="Front-end Dev Sass tag" class="card__tags">Sass</button>
         </div>
       </article>
     </section>
