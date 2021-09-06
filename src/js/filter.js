@@ -1,23 +1,43 @@
 export class Filter{
   constructor(){
-    this.tagsEl =  document.querySelectorAll('.card__tags');
-    this.filterEl =  document.querySelector('.filter');
-    this.filterListEl =  document.querySelector('.filter__list');
-    this.filterClearEl =  document.querySelectorAll('.filter__clear');
-    this.cardsEl =  document.querySelectorAll('.card');
     this.filters = [];  
+    this.filterEl =  document.querySelector('.filter');
+    this.filterWrapperEl =  document.querySelector('.filter__wrapper');
+    this.filterListEl =  document.querySelector('.filter__list');
+    this.cardsEl =  document.querySelectorAll('.card');
+    this.cardsWrapperEl =  document.querySelector('#cardWrapper');
   }
 
+  /**
+   * Push elements into array
+   * @param {*} value 
+   */
   pushFilters = (value) => {
     this.filters.push(value);
     return this.filters;
   }
 
+  /**
+   * Remove elements of array
+   * @param {*} value 
+   */
   removeIndexFilters = (value) => {
     let removeIndex = this.filters.map(function(item) { return item; }).indexOf(value);
     this.filters.splice(removeIndex, 1);
   }
 
+  /**
+   * Check if items is in array
+   * @param {*} array 
+   * @param {*} search 
+   */
+  isInArray = (array, search) => {
+    return array.includes(search);
+  }
+
+  /**
+   * Display filters container and show array tags
+   */
   showFilters = () =>{
     this.filterEl.style.display = 'block';
     let htmlTemplte = '';
@@ -34,24 +54,9 @@ export class Filter{
     })   
   }
 
-  removeFilters = () => {
-    document.querySelectorAll('.filter__icon').forEach(element => {
-      element.addEventListener('click', (e) =>{
-        let value = e.target.parentNode.previousElementSibling.innerText;
-        this.removeIndexFilters(value);
-        this.displayElements()
-        e.target.parentNode.parentNode.remove();
-        if(this.filters.length === 0 ){
-          this.filterEl.style.display = 'none';
-        }
-      })
-    })
-  }
-
-  isInArray = (array, search) => {
-    return array.includes(search);
-  }
-
+  /**
+   * Compare array filters with card data attributes and return the ones that exist
+   */
   tags = () => {
     let tags = [];
     let filters = [];
@@ -62,6 +67,9 @@ export class Filter{
     return filters
   }
 
+  /**
+   * Display filtered cards
+   */
   displayElements = () => {   
     let filters = this.tags();  
      
@@ -74,63 +82,45 @@ export class Filter{
     })  
   }
 
-  filtersClear = (e) => {
+  /**
+   * Remove filters of array, remove filters elements and hide filters container
+   */
+  filtersClear = () => {
     while (this.filters.length) {
       this.filters.pop();
-    }
-
-    this.filterListEl.innerHTML = '';
-
-    if(this.filters.length === 0 ){
       this.filterEl.style.display = 'none';
+      this.filterListEl.innerHTML = '';
     }
   }
 
-  // hideElements = (value) => { 
-  //   let filters = this.tags();  
-     
-  //   filters.forEach((cards, key) =>{   
-  //     if(cards){
-  //       this.cardsEl[key].classList.remove('card--disabled');
-  //     } else{
-  //       this.cardsEl[key].classList.add('card--disabled');
-  //     }
-  //   })  
-    
-  //   // this.cardsEl.forEach((cards, key) =>{
-    
-
-  //   //   if(cards.dataset.tags.includes(value) && 
-  //   //     !cards.classList.contains('card--disabled')){
-  //   //     cards.classList.remove('card--disabled');
-  //   //   } else{
-  //   //     cards.classList.add('card--disabled');
-  //   //   }    
-  //   // })
-  // }
-  
-
   eventListeners = () => {
-    this.tagsEl.forEach(element => {
-      element.addEventListener('click', (e) =>{
-        let value = e.target.innerText;       
-       
-        if (!this.isInArray(this.filters, value)){
-          this.pushFilters(value);  
-          this.showFilters();  
-          this.displayElements();
-          setTimeout (() =>{
-            this.removeFilters()
-          }, 100);   
-        }         
-      })
-    }); 
-
-    document.querySelector('.filter__clear').addEventListener('click', (e) =>{
-      this.filtersClear(e);
-      this.displayElements();
+   this.cardsWrapperEl.addEventListener('click', (e) =>{   
+     if(e.target.className === 'card__tags'){
+      let value = e.target.innerText;       
+      if (!this.isInArray(this.filters, value)){
+        this.pushFilters(value);  
+        this.showFilters();  
+        this.displayElements();
+      }         
+     }      
     })
-    
+
+    this.filterWrapperEl.addEventListener('click', (e) =>{
+      if(e.target.nodeName === 'IMG'){
+        let value = e.target.parentNode.previousElementSibling.innerText;
+        this.removeIndexFilters(value);
+        this.displayElements()
+        e.target.parentNode.parentNode.remove();
+        if(this.filters.length === 0 ){
+          this.filterEl.style.display = 'none';
+        }
+      }
+
+      if(e.target.className === 'filter__clear'){
+        this.filtersClear();
+        this.displayElements();
+      }     
+    })    
   }
 
 }

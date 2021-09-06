@@ -50,7 +50,7 @@
     border-top-right-radius: rem(5);
     border-bottom-right-radius: rem(5);
     transition: .4s;
-    padding: 0;
+    padding: rem(2);
     border: 0;
     &:hover{
       background-color: $black;
