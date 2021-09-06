@@ -46,7 +46,7 @@ export class Filter{
         <li class="filter__item">
           <span class="filter__text">${element}</span>
           <button type="button" aria-label="remove ${element} filter" class="filter__icon">
-            <img width="14" height="14" src="images/icon-remove.svg" alt="Icon remove filter">
+          
           </button>
         </li>      
       `;
@@ -106,11 +106,12 @@ export class Filter{
     })
 
     this.filterWrapperEl.addEventListener('click', (e) =>{
-      if(e.target.nodeName === 'IMG'){
-        let value = e.target.parentNode.previousElementSibling.innerText;
+      if(e.target.className === 'filter__icon'){
+        let value = e.target.previousElementSibling.innerText;
+
         this.removeIndexFilters(value);
-        this.displayElements()
-        e.target.parentNode.parentNode.remove();
+        this.displayElements();
+        e.target.parentNode.remove();
         if(this.filters.length === 0 ){
           this.filterEl.style.display = 'none';
         }

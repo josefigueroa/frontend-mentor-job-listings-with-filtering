@@ -50,7 +50,10 @@
     border-top-right-radius: rem(5);
     border-bottom-right-radius: rem(5);
     transition: .4s;
-    padding: rem(2);
+    padding: rem(16);
+    background-image: url('#{$img-path}icon-remove.svg');
+    background-repeat: no-repeat;
+    background-position: center;
     border: 0;
     &:hover{
       background-color: $black;
